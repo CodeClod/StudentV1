@@ -32,6 +32,15 @@ public class InitData implements CommandLineRunner {
         System.out.println("Save Successful");
         System.out.println(studentRepository.findAll());
 
+        Student s2 = new Student();
+        s1.setId(2);
+        s1.setName("Kim Kitsuragi");
+        s1.setBornDate(LocalDate.now());
+        s1.setBornTime(LocalDate.now());
+        studentRepository.save(s1);
+        System.out.println("Save Successful");
+        System.out.println(studentRepository.findAll());
+
         Teacher t1 = new Teacher();
         t1.setId(2);
         t1.setName("Dalanar");
