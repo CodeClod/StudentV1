@@ -18,6 +18,7 @@ public class studentTest {
     @Autowired
     StudentRepository studentRepository;
 
+
     @BeforeEach
     void setup() {
         Student std = new Student();
@@ -27,6 +28,8 @@ public class studentTest {
         studentRepository.save(std);
     }
 
+
+
     @Test
     void test() {
         assertEquals(1,1);
@@ -34,8 +37,11 @@ public class studentTest {
 
 
 
+
+
     @Test
     void testStudentByName() {
-        assertEquals("Viggo", studentRepository.findByName("Viggo") );
+        assertEquals("Viggo", studentRepository.findByName("Viggo").orElse(new Student()).getName() );
     }
+
 }
