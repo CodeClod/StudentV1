@@ -12,7 +12,7 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DataJpaTest
+@DataJpaTest // laver bare tests uden at tage application.properties super alvorligt såsom @SpringTest
 public class studentTest {
 
     @Autowired
