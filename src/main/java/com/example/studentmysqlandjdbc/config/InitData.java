@@ -23,6 +23,7 @@ public class InitData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+
         Student s1 = new Student();
         s1.setId(1);
         s1.setName("Calladin");
